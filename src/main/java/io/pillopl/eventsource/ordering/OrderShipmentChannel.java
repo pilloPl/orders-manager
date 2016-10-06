@@ -1,5 +1,6 @@
 package io.pillopl.eventsource.ordering;
 
+import io.pillopl.eventsource.ordering.shipment.CreateShipment;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.integration.annotation.Publisher;
 import org.springframework.stereotype.Component;
@@ -9,6 +10,8 @@ import org.springframework.stereotype.Component;
 public class OrderShipmentChannel {
 
     @Publisher(channel = "commands")
-    public void ship() {
+    public CreateShipment ship(CreateShipment command) {
+        log.info("Creating shipment {}", command);
+        return command;
     }
 }
