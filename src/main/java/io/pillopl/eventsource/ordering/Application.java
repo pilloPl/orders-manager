@@ -8,7 +8,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @SpringBootApplication
 @EnableAspectJAutoProxy(proxyTargetClass = true)
-@EnableBinding(OrderingBindings.class)
+@EnableBinding(Channels.class)
 @Slf4j
 public class Application {
 
